@@ -5,6 +5,14 @@ on:
     branches:
       - develop
 
+env:
+  DEVELOCITY_INJECTION_ENABLED: true
+  DEVELOCITY_URL: ${{ secrets.DEVELOCITY_URL }}
+  DEVELOCITY_ACCESS_KEY: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
+  DEVELOCITY_ENFORCE_URL: true
+  DEVELOCITY_PLUGIN_VERSION: "3.19.1"
+  DEVELOCITY_CCUD_PLUGIN_VERSION: "2.1"
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
